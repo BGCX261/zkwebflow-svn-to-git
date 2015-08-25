@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.zkoss.zwf</groupId>
+		<artifactId>zwfprj</artifactId>
+		<version>1.0.0-RC2</version>
+	</parent>
+
+	<groupId>org.zkoss.zwf</groupId>
+	<artifactId>zwf</artifactId>
+	<version>1.0.0-RC2</version>
+	<packaging>jar</packaging>
+	<name>The ZK Web Flow Engine</name>
+	<url>http://www.zkoss.org/zwf</url>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+  			<artifactId>portlet-api</artifactId>
+  			<version>${portlet-api.version}</version>
+  			<optional>true</optional>
+  		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+				<source>1.5</source>
+				<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
